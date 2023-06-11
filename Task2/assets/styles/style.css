@@ -1,0 +1,281 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    max-height: 1200px;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100px 1fr 1fr;
+    background-image:url(MainBackground.jpg); 
+    background-position: center;
+    background-size: cover; 
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-basis: 100%;
+    background-color:  #0B1D26;
+    align-items: center;
+}
+.logo{
+    font-family: 'Philosopher', sans-serif;
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: 0.01em;
+    text-transform: capitalize;
+    color: antiquewhite;
+}
+nav{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex-basis: 30%;
+    justify-content: space-between;
+    margin-left: 200px;
+    margin-right: 200px;
+    
+}
+a{
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 150;
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration: none;
+    color: antiquewhite;
+}
+.account{
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 150;
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration: none;
+    color: antiquewhite;
+}
+.icon{
+    width: 20px;
+    height: 20px;
+    margin-bottom: -4px;
+}
+main{
+    display: grid;
+    grid-template-rows: 1.4fr repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "headerGroup headerGroup"
+    "text01 img1"
+    "img2 text02"
+    "text03 img3";  
+    background: linear-gradient(rgba(246, 247, 248, 0) 25%, #0B1D26 35%);
+}
+.headerGroup{
+    grid-area: headerGroup;
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 200px;
+    margin-left: 300px;
+    margin-right: 300px;
+    gap: 32px;
+    background: linear-gradient(#0B1D26 5%, rgba(246, 247, 248, 0) 80%);
+}
+img{
+    height: 620px;
+    width: 466px;
+    /*когда хочу добавить margin-bottom для img, то, указанная в свойстве величина, будто распространяется и на "headerGroup" и все сьезжает вниз, не могу понять, почему*/
+}
+.tagline{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 150;
+    font-size: 18px;
+    line-height: 22px;
+    color: #f8d279;
+}
+.line{
+    width: 70px;
+    height: 2px;
+    margin-bottom: 5px;
+    margin-right: 15px;
+    
+}
+h1{
+    font-family: 'Philosopher', sans-serif;
+    font-size: 52px;
+    line-height: 50px;
+    letter-spacing: 0.01em;
+    text-transform: capitalize;
+    color: antiquewhite;
+}
+.scroll{
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 150;
+    font-size: 18px;
+    line-height: 22px;
+    color: antiquewhite;
+}
+h2{
+    font-family: 'Philosopher', sans-serif;
+    font-size: 32px;
+    line-height: 50px;
+    letter-spacing: 0.01em;
+    text-transform: capitalize;
+    color: antiquewhite;
+}
+.text{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 150;
+    font-size: 18px;
+    line-height: 22px;
+    color: antiquewhite;
+}
+.readMore{
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 150;
+    font-size: 18px;
+    line-height: 22px;
+    color: #f8d279;
+}
+.number{
+    position: absolute;
+    margin-left: -60px;
+    font-family: 'Philosopher', sans-serif;
+    font-style:normal;
+    font-weight: bolder;
+    font-size: 200px;
+    line-height: 22px;
+    color: rgba(250, 235, 215, 0.089);
+}
+.text01{
+    grid-area: text01;
+    margin-left: 20%;
+    margin-right: 10%;
+    margin-top: 10%;
+
+}
+.text02{
+    grid-area: text02;
+    margin-left: 10%;
+    margin-right: 20%;
+    margin-top: 10%;
+}
+.text03{
+    grid-area: text03;
+    margin-left: 20%;
+    margin-right: 10%;
+    margin-top: 10%;
+}
+.img1{
+    grid-area: img1;
+    margin-left: 10%;
+}
+.img2{
+    grid-area: img2;
+    margin-left: 20%;
+}
+.img3{
+    grid-area: img3;
+    margin-left: 10%;
+}
+footer{
+    display: grid;
+    grid-template-columns: 2fr repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    padding: 5%;
+    background-color:  #0B1D26;
+}
+.footerText{
+    margin-right: 50%;
+}
+.headContacts{
+    margin-bottom: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #f8d279;
+}
+.nav{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5,1fr);
+    justify-content: space-between;
+}
+@media (max-width: 1080px){
+    .container{
+    grid-template-rows: 20% 1fr 2fr;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+nav{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+main{
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "headerGroup"
+    "text01"
+    "text02"
+    "text03";
+}
+.img1{
+    display: none;
+}
+.img2{
+    display: none;
+}
+.img3{
+    display: none;
+}
+.headerGroup{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+.number{
+    font-size: 100px;
+    margin-left: -5px;
+}
+.text01{
+    margin: 5%
+}
+.text02{
+    margin: 5%
+}
+.text03{
+    margin: 5%
+}
+footer{
+    display: none;
+}
+}
